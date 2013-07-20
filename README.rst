@@ -12,6 +12,11 @@ coalringbuf
 
 Supported platforms: platform independent.
 
+Status
+------
+
+It's usable and it passes port of original test suite.
+
 Usage
 -----
 
@@ -56,6 +61,12 @@ Example intepreter session:
     ['something', 'something else', 'quack', 'this will overwrite "value"']
     >>> buffer.empty
     True
+
+TODO
+----
+
+* implement performance tests
+* provide more efficient bucket class if needed
 
 
 Copyright
