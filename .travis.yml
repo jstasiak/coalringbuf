@@ -9,4 +9,6 @@ python:
 install:
   - pip install -r requirements-dev.txt
   - pip install .
-script: COALRINGBUF_FULL_TEST=1 nosetests -v
+script:
+  - if [ "$TRAVIS_SOLO" != "true" ]; then COALRINGBUF_FULL_TEST=1; fi;
+    nosetests -v --with-coverage --cover-package=coalringbuf
