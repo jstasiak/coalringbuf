@@ -11,4 +11,5 @@ install:
   - pip install .
 script:
   - if [ "$TRAVIS_SOLO" != "true" ]; then COALRINGBUF_FULL_TEST=1; fi;
-    nosetests -v --with-coverage --cover-package=coalringbuf
+    if [ "$TRAVIS_PYTHON_VERSION" != "pypy" ]; then OPTIONS="--with-coverage"; fi;
+    nosetests -v $OPTIONS --cover-package=coalringbuf
