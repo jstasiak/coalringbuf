@@ -31,11 +31,12 @@ def assert_contains(buffer, *args):
 
 
 def test_should_correctly_increase_the_capacity_to_the_next_higher_power_of_two():
-    for in_capacity, result_capacity in ((15, 16), (16, 16), (17, 32)):
-        yield check_capacity, create_buffer(in_capacity), result_capacity
+    for requested_capacity, result_capacity in ((15, 16), (16, 16), (17, 32)):
+        yield check_capacity, requested_capacity, result_capacity
 
 
-def check_capacity(buffer, capacity):
+def check_capacity(requested_capacity, capacity):
+    buffer = create_buffer(requested_capacity)
     eq_(buffer.capacity, capacity)
 
 
