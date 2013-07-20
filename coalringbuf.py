@@ -28,7 +28,6 @@ class CoalescingBuffer(object):
         :returns: true if the buffer is empty, false otherwise
         :rtype: bool
         '''
-        pass
 
     @property
     def full(self):
