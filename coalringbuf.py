@@ -63,7 +63,12 @@ class CoalescingBuffer(object):
 
 
 def next_power_of_two(number):
-    return 1 << len(bin(number - 1).lstrip('0b'))
+    result = 1
+
+    while result < number:
+        result *= 2
+
+    return result
 
 
 class CoalescingRingBuffer(object):
