@@ -55,20 +55,23 @@ def test_should_correctly_report_size():
 
     buffer.offer(1, 'qwe')
 
-    eq_((buffer.size, buffer.empty, buffer.full),
-        (2, False, True))
+    eq_(buffer.size, 2)
+    not_(buffer.empty)
+    ok_(buffer.full)
 
     fetched = buffer.poll(bucket, 1)
 
     eq_(fetched, 1)
-    eq_((buffer.size, buffer.empty, buffer.full),
-        (1, False, False))
+    eq_(buffer.size, 1)
+    not_(buffer.empty)
+    not_(buffer.full)
 
     fetched = buffer.poll(bucket, 1)
 
     eq_(fetched, 1)
-    eq_((buffer.size, buffer.empty, buffer.full),
-        (0, True, False))
+    eq_(buffer.size, 0)
+    ok_(buffer.empty)
+    not_(buffer.full)
 
 
 def test_should_reject_values_without_keys_when_full():
