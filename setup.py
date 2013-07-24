@@ -21,7 +21,7 @@ install_requires = [
 setup(
     name='coalringbuf',
     version=version,
-    description='Python clone of LMAX CoalescingRingBuffer',
+    description='Python port of CoalescingRingBuffer from LMAXCollections',
     long_description=readme,
     author='Jakub Stasiak',
     url='https://github.com/jstasiak/coalringbuf',
@@ -38,6 +38,7 @@ setup(
         'Topic :: Utilities',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.5',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',

@@ -15,7 +15,7 @@ Supported platforms: platform independent.
 Status
 ------
 
-It's usable and it passes port of original test suite.
+It's usable and it passes port of original test suite. It's currently based on LMAXCollections 1.1.0.
 
 Usage
 -----
